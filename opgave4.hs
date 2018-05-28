@@ -1,5 +1,9 @@
---efterOrd :: Ordering -> Ordering -> [Ordering]
+efterOrd :: Ordering -> Ordering -> [Ordering]
 
+efterOrd a b 
+        | a>b = [a]
+        | a==b = [a]
+        | a<b = a: efterOrd (succ a) b
 
 
 efterInt :: Int-> Int -> [Int]
