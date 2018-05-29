@@ -19,7 +19,6 @@ filterDbStrings :: [DatabaseItem] -> [String]
 filterDbStrings [] = []
 filterDbStrings [(DbString a)] = [a]
 filterDbStrings ((DbString a):xs) = a :filterDbStrings xs
---filterDbStrings _ = []
 filterDbStrings (_:xs) = filterDbStrings xs
 
 sumDbNumbers :: [DatabaseItem] -> Integer 
